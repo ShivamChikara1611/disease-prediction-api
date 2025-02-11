@@ -3,8 +3,10 @@ import joblib
 import pandas as pd
 import logging
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 logging.basicConfig(level=logging.INFO)
 
 # Compute the absolute path for the model file relative to this file's location
